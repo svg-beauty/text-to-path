@@ -1,5 +1,5 @@
 {
-  "name": "google-font-to-svg-path",
+  "name": "text-to-path",
   "version": "1.0.0",
   "description": "Create an SVG path from a Google font",
   "main": "index.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danmarshall/google-font-to-svg-path.git"
+    "url": "git+https://github.com/svg-beauty/text-to-path.git"
   },
   "keywords": [
     "google",
@@ -20,16 +20,17 @@
   "author": "Dan Marshall",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/danmarshall/google-font-to-svg-path/issues"
+    "url": "https://github.com/svg-beauty/text-to-path/issues"
   },
-  "homepage": "https://github.com/danmarshall/google-font-to-svg-path#readme",
+  "homepage": "https://github.com/svg-beauty/text-to-path#readme",
   "dependencies": {
-    "@types/google.fonts": "^1.0.1",
-    "makerjs": "^0.9.71",
-    "opentype.js": "^0.7.3"
+    "@types/google.fonts": "^1.0.4",
+    "makerjs": "^0.18.1",
+    "opentype.js": "^1.3.4"
   },
   "devDependencies": {
+    "@types/node": "^20.8.10",
     "http-server": "^14.1.1",
-    "typescript": "^5.1.6"
+    "typescript": "^5.2.2"
   }
 }
