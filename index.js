@@ -1,4 +1,4 @@
-///<reference path="node_modules/makerjs/index.d.ts" />
+///<reference path="node_modules/makerjs/dist/index.d.ts" />
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -164,7 +164,8 @@ var App = /** @class */ (function () {
         this.strokeNonScalingCheckbox = this.$('#input-stroke-non-scaling');
         this.fillRuleInput = this.$("#input-fill-rule");
         // Init units select.
-        Object.values(makerjs.unitType).forEach(function (unit) { return _this.addOption(_this.selectUnits, unit); });
+        Object.values(makerjs.unitType).forEach(function (unit) { return _this.addOption(_this.selectUnits, typeof unit === 'string'
+            ? unit : ''); });
     };
     App.prototype.readQueryParams = function () {
         var urlSearchParams = new URLSearchParams(window.location.search);

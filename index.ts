@@ -1,6 +1,6 @@
-///<reference path="node_modules/makerjs/index.d.ts" />
+///<reference path="node_modules/makerjs/dist/index.d.ts" />
 
-const makerjs = require('makerjs') as typeof MakerJs;
+const makerjs = require('makerjs');
 
 type FillRule = 'nonzero' | 'evenodd';
 
@@ -175,7 +175,8 @@ class App {
         this.fillRuleInput = this.$("#input-fill-rule") as HTMLSelectElement;
 
         // Init units select.
-        Object.values(makerjs.unitType).forEach(unit => this.addOption(this.selectUnits, unit));
+        Object.values(makerjs.unitType).forEach(unit => this.addOption(this.selectUnits, typeof unit === 'string' 
+        ? unit : ''));
     }
 
     readQueryParams() {
